@@ -25,7 +25,7 @@ with DAG(
         description="testing_airflow",
         default_args=default_args,
         schedule_interval=intervals["every_3_days"],
-        start_date=datetime(2021, 11, 27, tzinfo=timezone("Europe/Amsterdam")),
+        start_date=datetime(2021, 11, 1, tzinfo=timezone("Europe/Amsterdam")),
 ) as premier_league_table_dag:
     premier_league_table_task = BashOperator(
         task_id="premier_league_table",
